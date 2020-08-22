@@ -28,19 +28,26 @@ class help(commands.Cog):
         embed.add_field(name="What It Does", value="Gives details about Fall Guys different rounds!", inline=True)
         embed.add_field(name="\u200b", value="\u200b", inline=True)
         embed.add_field(name="<:FGMeme:745299007135285309> Meme", value="!fg meme", inline=True)
-        embed.add_field(name="What It Does", value="Sends a random meme from the r/FallGuysMemes subreddit! (Random from top 10 of past week)", inline=True)
+        embed.add_field(name="What It Does", value="Sends a random meme from the r/FallGuysGame subreddit!", inline=True)
+        embed.add_field(name="\u200b", value="\u200b", inline=True)
+        embed.add_field(name="<:FGShop:746727419402125413> Shop", value="!fg shop", inline=True)
+        embed.add_field(name="What It Does", value="Shows the latest available featured items!", inline=True)
         embed.add_field(name="\u200b", value="\u200b", inline=True)
         embed.add_field(name="<:FGSpec1:745294700667338752> Spec", value="!fg spec", inline=True)
         embed.add_field(name="What It Does", value="Shows the PC hardware requirements for Fall Guys!", inline=True)
         embed.add_field(name="\u200b", value="\u200b", inline=True)
-        embed.add_field(name="<:FGSupport:745352162661630083> Server", value="!fg server", inline=True)
-        embed.add_field(name="What It Does", value="Gives an invite to the bot support server!", inline=True)
-        embed.add_field(name="\u200b", value="\u200b", inline=True)
-        embed.add_field(name="<:FGInvite:745321966700986368> Invite", value="!fg invite", inline=True)
-        embed.add_field(name="What It Does", value="Gives the invite link for the bot!", inline=True)
-        embed.add_field(name="\u200b", value="\u200b", inline=True)
 
+        embed2 = discord.Embed(
+            color = 0x30D8DE)
+        embed2.add_field(name="<:FGSupport:745352162661630083> Server", value="!fg server", inline=True)
+        embed2.add_field(name="What It Does", value="Gives an invite to the bot support server!", inline=True)
+        embed2.add_field(name="\u200b", value="\u200b", inline=True)
+        embed2.add_field(name="<:FGInvite:745321966700986368> Invite", value="!fg invite", inline=True)
+        embed2.add_field(name="What It Does", value="Gives the invite link for the bot!", inline=True)
+        embed2.add_field(name="\u200b", value="\u200b", inline=True)
+        
         await ctx.send(embed=embed)
+        await ctx.send(embed=embed2)
 
 def setup(bot):
     bot.add_cog(help(bot))
